@@ -28,7 +28,11 @@
   "bugs": "https://github.com/metonym/svelte-accessible-accordion/issues",
   "keywords": [
     "svelte",
-    "svelte component"
+    "svelte component",
+    "accordion",
+    "accessible",
+    "wai-aria",
+    "a11y"
   ],
   "files": [
     "lib",

@@ -9,8 +9,10 @@ Extracted from [svelte-uswds](https://github.com/metonym/svelte-uswds), this com
 
 ## Install
 
-```bash
+```sh
 yarn add -D svelte-accessible-accordion
+# OR
+npm i -D svelte-accessible-accordion
 ```
 
 ## Usage
@@ -30,7 +32,7 @@ yarn add -D svelte-accessible-accordion
 
 By default, only one accordion item can be expanded at one time. Set `multiselectable` to allow multi-item expansion.
 
-```html
+```svelte
 <Accordion multiselectable>
   <AccordionItem title="Title 1">Content 1</AccordionItem>
   <AccordionItem title="Title 2">Content 2</AccordionItem>
@@ -41,7 +43,7 @@ By default, only one accordion item can be expanded at one time. Set `multiselec
 
 Use the `expanded` prop to expand an accordion item.
 
-```html
+```svelte
 <AccordionItem title="Title 1" expanded>Content 1</AccordionItem>
 ```
 

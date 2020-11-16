@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "svite",
+    "build": "svite build --base= --assetsDir=assets",
+    "deploy": "npx gh-pages -d dist"
+  },
+  "devDependencies": {
+    "mdsvex": "^0.8.8",
+    "svelte": "^3.29.7",
+    "svite": "^0.8.0"
+  }
+}

@@ -8,26 +8,21 @@
 
   const ctx = getContext("Accordion");
 
-  let ref = undefined;
+  let ref = null;
   let unsubscribe = undefined;
 
   onDestroy(() => {
-    if (ctx !== undefined) {
-      ctx.remove({ id });
-    }
-
-    if (unsubscribe !== undefined) {
-      unsubscribe();
-    }
+    if (ctx) ctx.remove({ id });
+    if (unsubscribe) unsubscribe();
   });
 
-  $: if (ctx !== undefined) {
+  $: button_id = `button-${id}`;
+  $: if (ctx) {
     ctx.add({ id, expanded });
-    unsubscribe = ctx.items.subscribe(value => {
+    unsubscribe = ctx.items.subscribe((value) => {
       expanded = value[id];
     });
   }
-  $: button_id = `button-${id}`;
 </script>
 
 <style>

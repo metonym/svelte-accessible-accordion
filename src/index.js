@@ -1,5 +1,2 @@
-import Accordion from "./Accordion.svelte";
-import AccordionItem from "./AccordionItem.svelte";
-
-export default Accordion;
-export { AccordionItem };
+export { default as default } from "./Accordion.svelte";
+export { default as AccordionItem } from "./AccordionItem.svelte";

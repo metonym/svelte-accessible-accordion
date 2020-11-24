@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Dispatch change event for `Accordion`
 
+## [0.2.0](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v0.2.0) - 2020-11-24
+
+- Add TypeScript definitions
+
 ## [0.1.0](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v0.1.0) - 2020-04-22
 
 - Initial release

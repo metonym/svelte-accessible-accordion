@@ -3,13 +3,13 @@
 [![NPM][npm]][npm-url]
 [![Build][build]][build-badge]
 
-> Accessible accordion component.
+> Accessible accordion component for Svelte.
 
-Extracted from [svelte-uswds](https://github.com/metonym/svelte-uswds), this component follows [WAI-ARIA design guidelines for an Accordion](https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html) for accessbility.
+This Svelte component implements [WAI-ARIA design guidelines for an Accordion](https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html).
 
 ## Install
 
-```sh
+```bash
 yarn add -D svelte-accessible-accordion
 # OR
 npm i -D svelte-accessible-accordion
@@ -17,7 +17,7 @@ npm i -D svelte-accessible-accordion
 
 ## Usage
 
-```html
+```svelte
 <script>
   import Accordion, { AccordionItem } from "svelte-accessible-accordion";
 </script>
@@ -25,6 +25,7 @@ npm i -D svelte-accessible-accordion
 <Accordion>
   <AccordionItem title="Title 1">Content 1</AccordionItem>
   <AccordionItem title="Title 2">Content 2</AccordionItem>
+  <AccordionItem title="Title 3">Content 2</AccordionItem>
 </Accordion>
 ```
 
@@ -51,13 +52,13 @@ Use the `expanded` prop to expand an accordion item.
 
 ### `Accordion`
 
-| Property name   | Value                        |
+| Prop name   | Value                        |
 | :-------------- | :--------------------------- |
 | multiselectable | `boolean` (default: `false`) |
 
 ### `AccordionItem`
 
-| Property name | Value                                                      |
+| Prop name | Value                                                      |
 | :------------ | :--------------------------------------------------------- |
 | id            | `string` (default: `"item" + Math.random().toString(36)"`) |
 | title         | `string` or `slot:title` (default: `"Title"`)              |
@@ -80,7 +81,7 @@ Use the `expanded` prop to expand an accordion item.
 
 [MIT](LICENSE)
 
-[npm]: https://img.shields.io/npm/v/svelte-accessible-accordion.svg?color=blue
+[npm]: https://img.shields.io/npm/v/svelte-accessible-accordion.svg?color=%23ff3e00
 [npm-url]: https://npmjs.com/package/svelte-accessible-accordion
 [build]: https://travis-ci.com/metonym/svelte-accessible-accordion.svg?branch=master
 [build-badge]: https://travis-ci.com/metonym/svelte-accessible-accordion

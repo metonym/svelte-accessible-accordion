@@ -48,6 +48,14 @@ Use the `expanded` prop to expand an accordion item.
 <AccordionItem title="Title 1" expanded>Content 1</AccordionItem>
 ```
 
+### `AccordionItem` button class
+
+Provide a button class using the `buttonClass` prop.
+
+```svelte
+<AccordionItem buttonClass="bg-gray-100">Content 1</AccordionItem>
+```
+
 ## API
 
 ### `Accordion`
@@ -64,6 +72,7 @@ Use the `expanded` prop to expand an accordion item.
 | title         | `string` or `slot:title` (default: `"Title"`)              |
 | expanded      | `boolean` (default: `false`)                               |
 | disabled      | `boolean` (default: `false`)                               |
+| buttonClass   | `string` (default: `""`)                                   |
 
 #### Forwarded events
 
@@ -81,7 +90,7 @@ Use the `expanded` prop to expand an accordion item.
 
 [MIT](LICENSE)
 
-[npm]: https://img.shields.io/npm/v/svelte-accessible-accordion.svg?color=%23ff3e00
+[npm]: https://img.shields.io/npm/v/svelte-accessible-accordion.svg?style=for-the-badge&color=%23ff3e00
 [npm-url]: https://npmjs.com/package/svelte-accessible-accordion
-[build]: https://travis-ci.com/metonym/svelte-accessible-accordion.svg?branch=master
+[build]: https://img.shields.io/travis/com/metonym/svelte-accessible-accordion?color=28a745&style=for-the-badge
 [build-badge]: https://travis-ci.com/metonym/svelte-accessible-accordion

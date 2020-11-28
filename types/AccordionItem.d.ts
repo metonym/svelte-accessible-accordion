@@ -20,6 +20,11 @@ export interface AccordionItemProps extends svelte.JSX.HTMLAttributes<HTMLElemen
    * @default false
    */
   disabled?: boolean;
+
+  /**
+   * @default ""
+   */
+  buttonClass?: string;
 }
 
 export default class AccordionItem {

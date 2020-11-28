@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Dispatch change event for `Accordion`
 
+## [0.3.0](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v0.3.0) - 2020-11-28
+
+- Add a `buttonClass` prop to `AccordionItem` ([PR #1](https://github.com/metonym/svelte-accessible-accordion/pull/1), thanks [@bgilhome-lds](https://github.com/bgilhome-lds)!)
+
 ## [0.2.0](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v0.2.0) - 2020-11-24
 
 - Add TypeScript definitions

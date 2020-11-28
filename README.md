@@ -7,6 +7,8 @@
 
 This Svelte component implements [WAI-ARIA design guidelines for an Accordion](https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html).
 
+Try it in the [Svelte REPL](https://svelte.dev/repl/85be3a105c3f4fe0892150380914be96?version=3.30.0).
+
 ## Install
 
 ```bash

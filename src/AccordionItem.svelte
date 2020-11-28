@@ -3,6 +3,7 @@
   export let title = "Title";
   export let expanded = false;
   export let disabled = false;
+  export let buttonClass = "";
 
   import { getContext, onDestroy } from "svelte";
 
@@ -50,6 +51,7 @@
 
 <li {...$$restProps}>
   <button
+    class={buttonClass}
     bind:this={ref}
     aria-expanded={expanded}
     aria-controls={id}

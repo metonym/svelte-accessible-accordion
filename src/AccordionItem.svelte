@@ -28,27 +28,25 @@
 </script>
 
 <style>
-  .default {
-    li {
-      list-style: none;
-      margin: 0.25rem 0;
-    }
+  .default li {
+    list-style: none;
+    margin: 0.25rem 0;
+  }
 
-    button {
-      border: 2px solid #e0e0e0;
-      background: none;
-      font: inherit;
-      line-height: inherit;
-      color: inherit;
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      width: 100%;
-      text-align: left;
-    }
+  .default button {
+    border: 2px solid #e0e0e0;
+    background: none;
+    font: inherit;
+    line-height: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: left;
+  }
 
-    div {
-      padding: 1rem;
-    }
+  .default div {
+    padding: 1rem;
   }
 </style>
 

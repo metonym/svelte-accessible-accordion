@@ -4,6 +4,7 @@
   export let expanded = false;
   export let disabled = false;
   export let buttonClass = "";
+  export let style = "default";
 
   import { getContext, onDestroy } from "svelte";
 
@@ -27,29 +28,31 @@
 </script>
 
 <style>
-  li {
-    list-style: none;
-    margin: 0.25rem 0;
-  }
+  .default {
+    li {
+      list-style: none;
+      margin: 0.25rem 0;
+    }
 
-  button {
-    border: 2px solid #e0e0e0;
-    background: none;
-    font: inherit;
-    line-height: inherit;
-    color: inherit;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    width: 100%;
-    text-align: left;
-  }
+    button {
+      border: 2px solid #e0e0e0;
+      background: none;
+      font: inherit;
+      line-height: inherit;
+      color: inherit;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      text-align: left;
+    }
 
-  div {
-    padding: 1rem;
+    div {
+      padding: 1rem;
+    }
   }
 </style>
 
-<li {...$$restProps}>
+<li class="{style || ''}" {...$$restProps}>
   <button
     class={buttonClass}
     bind:this={ref}

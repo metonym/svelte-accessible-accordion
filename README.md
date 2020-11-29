@@ -58,6 +58,14 @@ Provide a button class using the `buttonClass` prop.
 <AccordionItem buttonClass="bg-gray-100">Content 1</AccordionItem>
 ```
 
+### `AccordionItem` style toggle
+
+Remove the packaged base styles using the `addStyle` prop (default `true`).
+
+```svelte
+<AccordionItem buttonClass="bg-gray-100">Content 1</AccordionItem>
+```
+
 ## API
 
 ### `Accordion`
@@ -75,6 +83,7 @@ Provide a button class using the `buttonClass` prop.
 | expanded      | `boolean` (default: `false`)                               |
 | disabled      | `boolean` (default: `false`)                               |
 | buttonClass   | `string` (default: `""`)                                   |
+| addStyle      | `boolean` (default: `true`)                                |
 
 #### Forwarded events
 

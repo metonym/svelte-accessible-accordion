@@ -10,13 +10,7 @@ export default () => {
   if (!BUNDLE) {
     return svelteReadme({
       minify: !DEV,
-      prefixUrl:
-        "https://github.com/metonym/svelte-svelte-accessible-accordion/tree/master/",
-      style: `
-          .code-fence ul {
-            padding: 0;
-          }
-        `,
+      style: `.code-fence ul { padding: 0; }`,
     });
   }
 

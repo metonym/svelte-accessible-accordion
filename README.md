@@ -9,6 +9,8 @@ This Svelte component implements [WAI-ARIA design guidelines for an Accordion](h
 
 Try it in the [Svelte REPL](https://svelte.dev/repl/85be3a105c3f4fe0892150380914be96?version=3.30.0).
 
+<!-- TOC -->
+
 ## Install
 
 ```bash
@@ -19,6 +21,7 @@ npm i -D svelte-accessible-accordion
 
 ## Usage
 
+<!-- prettier-ignore-start -->
 ```svelte
 <script>
   import Accordion, { AccordionItem } from "svelte-accessible-accordion";
@@ -30,51 +33,63 @@ npm i -D svelte-accessible-accordion
   <AccordionItem title="Title 3">Content 2</AccordionItem>
 </Accordion>
 ```
+<!-- prettier-ignore-end -->
 
 ### Multiselectable
 
 By default, only one accordion item can be expanded at one time. Set `multiselectable` to allow multi-item expansion.
 
+<!-- prettier-ignore-start -->
 ```svelte
 <Accordion multiselectable>
   <AccordionItem title="Title 1">Content 1</AccordionItem>
   <AccordionItem title="Title 2">Content 2</AccordionItem>
+  <AccordionItem title="Title 3">Content 2</AccordionItem>
 </Accordion>
 ```
+<!-- prettier-ignore-end -->
 
 ### Expanded items
 
 Use the `expanded` prop to expand an accordion item.
 
+<!-- prettier-ignore-start -->
 ```svelte
-<AccordionItem title="Title 1" expanded>Content 1</AccordionItem>
+<Accordion>
+  <AccordionItem expanded title="Title 1">Content 1</AccordionItem>
+  <AccordionItem title="Title 2">Content 2</AccordionItem>
+  <AccordionItem title="Title 3">Content 2</AccordionItem>
+</Accordion>
 ```
+<!-- prettier-ignore-end -->
 
 ### `AccordionItem` button class
 
 Provide a button class using the `buttonClass` prop.
 
+<!-- prettier-ignore-start -->
 ```svelte
 <AccordionItem buttonClass="bg-gray-100">Content 1</AccordionItem>
 ```
+<!-- prettier-ignore-end -->
 
 ## API
 
 ### `Accordion`
 
-| Prop name   | Value                        |
+| Prop name       | Value                        |
 | :-------------- | :--------------------------- |
 | multiselectable | `boolean` (default: `false`) |
 
 ### `AccordionItem`
 
-| Prop name | Value                                                      |
-| :------------ | :--------------------------------------------------------- |
-| id            | `string` (default: `"item" + Math.random().toString(36)"`) |
-| title         | `string` or `slot:title` (default: `"Title"`)              |
-| expanded      | `boolean` (default: `false`)                               |
-| disabled      | `boolean` (default: `false`)                               |
-| buttonClass   | `string` (default: `""`)                                   |
+| Prop name   | Value                                                      |
+| :---------- | :--------------------------------------------------------- |
+| id          | `string` (default: `"item" + Math.random().toString(36)"`) |
+| title       | `string` or `slot:title` (default: `"Title"`)              |
+| expanded    | `boolean` (default: `false`)                               |
+| disabled    | `boolean` (default: `false`)                               |
+| buttonClass | `string` (default: `""`)                                   |
 
 #### Forwarded events
 

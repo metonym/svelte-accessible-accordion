@@ -1,6 +1,6 @@
 {
   "name": "svelte-accessible-accordion",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Accessible accordion component for Svelte",
   "author": "Eric Liu (https://github.com/metonym)",
@@ -13,10 +13,12 @@
     "dev": "rollup -cw",
     "predeploy": "rollup -c",
     "deploy": "npx gh-pages -d dist",
-    "prepack": "BUNDLE=true rollup -c"
+    "prepack": "BUNDLE=true rollup -c",
+    "svelte-check": "svelte-check"
   },
   "devDependencies": {
     "svelte": "^3.31.0",
+    "svelte-check": "^1.1.24",
     "svelte-readme": "^2.1.1"
   },
   "repository": {

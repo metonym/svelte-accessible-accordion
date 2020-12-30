@@ -1,5 +1,5 @@
 <script>
-  export let multiselectable = false;
+  export let multiselect = false;
 
   import { setContext } from "svelte";
   import { writable } from "svelte/store";
@@ -13,13 +13,14 @@
     },
     remove: (item) => {
       items.update((_) => {
-        delete _[item.id];
-        return _;
+        const _items = { ..._ };
+        delete _items[item.id];
+        return _items;
       });
     },
     toggle: (item) => {
       items.update((_) => {
-        if (!multiselectable) {
+        if (!multiselect) {
           Object.keys(_).forEach((id) => (_[id] = false));
         }
 
@@ -29,6 +30,6 @@
   });
 </script>
 
-<ul {...$$restProps}>
+<ul data-accordion {...$$restProps}>
   <slot />
 </ul>

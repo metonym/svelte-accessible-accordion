@@ -6,7 +6,7 @@ export interface AccordionProps
   /**
    * @default false
    */
-  multiselectable?: boolean;
+  multiselect?: boolean;
 }
 
 export default class Accordion extends SvelteComponentTyped<

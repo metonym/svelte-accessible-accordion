@@ -3,13 +3,12 @@
   export let title = "Title";
   export let expanded = false;
   export let disabled = false;
-  export let buttonClass = "";
+  export let ref = null;
 
   import { getContext, onDestroy } from "svelte";
 
   const ctx = getContext("Accordion");
 
-  let ref = null;
   let unsubscribe = undefined;
 
   onDestroy(() => {
@@ -26,32 +25,8 @@
   }
 </script>
 
-<style>
-  li {
-    list-style: none;
-    margin: 0.25rem 0;
-  }
-
-  button {
-    border: 2px solid #e0e0e0;
-    background: none;
-    font: inherit;
-    line-height: inherit;
-    color: inherit;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    width: 100%;
-    text-align: left;
-  }
-
-  div {
-    padding: 1rem;
-  }
-</style>
-
-<li {...$$restProps}>
+<li data-accordion-item {...$$restProps}>
   <button
-    class={buttonClass}
     bind:this={ref}
     aria-expanded={expanded}
     aria-controls={id}
@@ -60,19 +35,11 @@
     id={button_id}
     on:click
     on:click={() => {
-      if (ctx !== undefined) {
+      if (ctx) {
         ctx.toggle({ id, expanded: !expanded });
-        if (expanded && ref && ref.getBoundingClientRect().top < 0) {
-          ref.scrollIntoView();
-        }
+        if (expanded && ref.getBoundingClientRect().top < 0) ref.scrollIntoView();
       }
-    }}
-    on:mouseover
-    on:mouseenter
-    on:mouseout
-    on:focus
-    on:blur
-    on:keydown>
+    }}>
     <slot name="title">{title}</slot>
   </button>
   <div role="region" {id} aria-labelledby={button_id} hidden={!expanded}>

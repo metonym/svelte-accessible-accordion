@@ -6,7 +6,34 @@ import pkg from "./package.json";
 export default () => {
   if (process.env.BUNDLE !== "true") {
     return svelteReadme({
-      style: `.code-fence ul { padding: 0; }`,
+      style: `
+        .code-fence ul { padding: 0; }
+
+        .code-fence li+li {
+          margin-top: 0;
+        }
+        
+        [data-accordion] {
+          list-style: none;
+        }
+        
+        [data-accordion-item] button {
+          border: 0;
+          border-bottom: 1px solid #e0e0e0;
+          background: none;
+          font: inherit;
+          line-height: inherit;
+          color: inherit;
+          cursor: pointer;
+          padding: 0.5rem 1rem;
+          width: 100%;
+          text-align: left;
+        }
+        
+        [data-accordion-item] [role="region"] {
+          padding: 1rem;
+        }
+        `,
     });
   }
 
@@ -21,7 +48,7 @@ export default () => {
         name: UMD ? pkg.name : undefined,
         exports: "named",
       },
-      plugins: [svelte({ emitCss: false }), resolve()],
+      plugins: [svelte(), resolve()],
     };
   });
 };

@@ -24,21 +24,13 @@ export interface AccordionItemProps
   disabled?: boolean;
 
   /**
-   * @default ""
+   * @default null
    */
-  buttonClass?: string;
+  ref?: null | HTMLButtonElement;
 }
 
 export default class AccordionItem extends SvelteComponentTyped<
   AccordionItemProps,
-  {
-    click: WindowEventMap["click"];
-    mouseover: WindowEventMap["mouseover"];
-    mouseenter: WindowEventMap["mouseenter"];
-    mouseout: WindowEventMap["mouseout"];
-    focus: WindowEventMap["focus"];
-    blur: WindowEventMap["blur"];
-    keydown: WindowEventMap["keydown"];
-  },
+  { click: WindowEventMap["click"] },
   { default: {}; title: {} }
 > {}

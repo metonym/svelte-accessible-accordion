@@ -1,11 +1,12 @@
 # svelte-accessible-accordion
 
 [![NPM][npm]][npm-url]
-[![Build][build]][build-badge]
 
 > Accessible accordion component for Svelte.
 
 This Svelte component implements [WAI-ARIA design guidelines for an Accordion](https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html).
+
+**Note**: This component is _unstyled_ by default.
 
 Try it in the [Svelte REPL](https://svelte.dev/repl/85be3a105c3f4fe0892150380914be96?version=3.30.0).
 
@@ -19,6 +20,42 @@ yarn add -D svelte-accessible-accordion
 npm i -D svelte-accessible-accordion
 ```
 
+## Styling
+
+Style the component by targeting the `[data-accordion]` and `[data-accordion-item]` attributes.
+
+```css
+[data-accordion] {
+  list-style: none;
+}
+
+[data-accordion-item] button {
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  background: none;
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+[data-accordion-item] [role="region"] {
+  padding: 1rem;
+}
+```
+
+The semantic element structure resembles the following:
+
+```yml
+- ul [data-accordion] # Accordion
+  - li [data-accordion-item] # AccordionItem
+    - button
+    - [role="region"]
+```
+
 ## Usage
 
 ### Basic
@@ -26,7 +63,7 @@ npm i -D svelte-accessible-accordion
 <!-- prettier-ignore-start -->
 ```svelte
 <script>
-  import Accordion, { AccordionItem } from "svelte-accessible-accordion";
+  import { Accordion, AccordionItem } from "svelte-accessible-accordion";
 </script>
 
 <Accordion>
@@ -37,13 +74,13 @@ npm i -D svelte-accessible-accordion
 ```
 <!-- prettier-ignore-end -->
 
-### Multiselectable
+### Multiselect
 
-By default, only one accordion item can be expanded at one time. Set `multiselectable` to allow multi-item expansion.
+By default, only one accordion item can be expanded at one time. Set `multiselect` to allow multi-item expansion.
 
 <!-- prettier-ignore-start -->
 ```svelte
-<Accordion multiselectable>
+<Accordion multiselect>
   <AccordionItem title="Title 1">Content 1</AccordionItem>
   <AccordionItem title="Title 2">Content 2</AccordionItem>
   <AccordionItem title="Title 3">Content 2</AccordionItem>
@@ -59,49 +96,32 @@ Use the `expanded` prop to expand an accordion item.
 ```svelte
 <Accordion>
   <AccordionItem expanded title="Title 1">Content 1</AccordionItem>
-  <AccordionItem title="Title 2">Content 2</AccordionItem>
-  <AccordionItem title="Title 3">Content 2</AccordionItem>
+  <AccordionItem expanded title="Title 2">Content 2</AccordionItem>
+  <AccordionItem expanded title="Title 3">Content 2</AccordionItem>
 </Accordion>
-```
-<!-- prettier-ignore-end -->
-
-### `AccordionItem` button class
-
-Provide a button class using the `buttonClass` prop.
-
-<!-- prettier-ignore-start -->
-```svelte
-<AccordionItem buttonClass="bg-gray-100">Content 1</AccordionItem>
 ```
 <!-- prettier-ignore-end -->
 
 ## API
 
-### `Accordion`
+### Accordion
 
-| Prop name       | Value                        |
-| :-------------- | :--------------------------- |
-| multiselectable | `boolean` (default: `false`) |
+| Prop name   | Value                        |
+| :---------- | :--------------------------- |
+| multiselect | `boolean` (default: `false`) |
 
-### `AccordionItem`
+### AccordionItem
 
-| Prop name   | Value                                                      |
-| :---------- | :--------------------------------------------------------- |
-| id          | `string` (default: `"item" + Math.random().toString(36)"`) |
-| title       | `string` or `slot:title` (default: `"Title"`)              |
-| expanded    | `boolean` (default: `false`)                               |
-| disabled    | `boolean` (default: `false`)                               |
-| buttonClass | `string` (default: `""`)                                   |
+| Prop name | Value                                                      |
+| :-------- | :--------------------------------------------------------- |
+| id        | `string` (default: `"item" + Math.random().toString(36)"`) |
+| title     | `string` or `slot:title` (default: `"Title"`)              |
+| expanded  | `boolean` (default: `false`)                               |
+| disabled  | `boolean` (default: `false`)                               |
 
 #### Forwarded events
 
 - on:click
-- on:mouseover
-- on:mouseenter
-- on:mouseout
-- on:focus
-- on:blur
-- on:keydown
 
 ## [Changelog](CHANGELOG.md)
 
@@ -111,5 +131,3 @@ Provide a button class using the `buttonClass` prop.
 
 [npm]: https://img.shields.io/npm/v/svelte-accessible-accordion.svg?style=for-the-badge&color=%23ff3e00
 [npm-url]: https://npmjs.com/package/svelte-accessible-accordion
-[build]: https://img.shields.io/travis/com/metonym/svelte-accessible-accordion?color=28a745&style=for-the-badge
-[build-badge]: https://travis-ci.com/metonym/svelte-accessible-accordion

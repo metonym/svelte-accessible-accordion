@@ -10,6 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Out-of-the box themes
 - Dispatch change event for `Accordion`
 
+## [1.0.0](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v1.0.0) - 2020-12-30
+
+**Breaking Changes**
+
+- Accordion `multiselectable` prop renamed to `multiselect`
+- AccordionItem is unstyled by default
+- All forwarded events except for "click" are removed from AccordionItem
+- AccordionItem: `buttonClass` prop is removed
+
 ## [0.4.0](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v0.4.0) - 2020-12-23
 
 - Use `SvelteComponentTyped` interface for TypeScript definitions

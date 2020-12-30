@@ -21,6 +21,8 @@ npm i -D svelte-accessible-accordion
 
 ## Usage
 
+### Basic
+
 <!-- prettier-ignore-start -->
 ```svelte
 <script>

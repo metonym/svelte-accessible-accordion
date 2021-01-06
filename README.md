@@ -10,6 +10,10 @@ This Svelte component implements [WAI-ARIA design guidelines for an Accordion](h
 
 Try it in the [Svelte REPL](https://svelte.dev/repl/85be3a105c3f4fe0892150380914be96?version=3.30.0).
 
+<!-- REPO_URL -->
+
+---
+
 <!-- TOC -->
 
 ## Install

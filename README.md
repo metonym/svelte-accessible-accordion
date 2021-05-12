@@ -4,19 +4,19 @@
 
 > Accessible accordion component for Svelte.
 
+<!-- REPO_URL -->
+
 This Svelte component implements [WAI-ARIA design guidelines for an Accordion](https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html).
 
 **Note**: This component is _unstyled_ by default.
 
-Try it in the [Svelte REPL](https://svelte.dev/repl/85be3a105c3f4fe0892150380914be96?version=3.30.0).
-
-<!-- REPO_URL -->
+Try it in the [Svelte REPL](https://svelte.dev/repl/85be3a105c3f4fe0892150380914be96).
 
 ---
 
 <!-- TOC -->
 
-## Install
+## Installation
 
 ```bash
 yarn add -D svelte-accessible-accordion
@@ -65,7 +65,6 @@ The semantic element structure resembles the following:
 
 ### Basic
 
-<!-- prettier-ignore-start -->
 ```svelte
 <script>
   import { Accordion, AccordionItem } from "svelte-accessible-accordion";
@@ -76,36 +75,34 @@ The semantic element structure resembles the following:
   <AccordionItem title="Title 2">Content 2</AccordionItem>
   <AccordionItem title="Title 3">Content 2</AccordionItem>
 </Accordion>
+
 ```
-<!-- prettier-ignore-end -->
 
 ### Multiselect
 
 By default, only one accordion item can be expanded at one time. Set `multiselect` to allow multi-item expansion.
 
-<!-- prettier-ignore-start -->
 ```svelte
 <Accordion multiselect>
   <AccordionItem title="Title 1">Content 1</AccordionItem>
   <AccordionItem title="Title 2">Content 2</AccordionItem>
   <AccordionItem title="Title 3">Content 2</AccordionItem>
 </Accordion>
+
 ```
-<!-- prettier-ignore-end -->
 
 ### Expanded items
 
 Use the `expanded` prop to expand an accordion item.
 
-<!-- prettier-ignore-start -->
 ```svelte
 <Accordion>
   <AccordionItem expanded title="Title 1">Content 1</AccordionItem>
   <AccordionItem expanded title="Title 2">Content 2</AccordionItem>
   <AccordionItem expanded title="Title 3">Content 2</AccordionItem>
 </Accordion>
+
 ```
-<!-- prettier-ignore-end -->
 
 ## API
 
@@ -127,6 +124,10 @@ Use the `expanded` prop to expand an accordion item.
 #### Forwarded events
 
 - on:click
+
+## TypeScript
+
+Svelte version 3.31 or greater is required to use this component with TypeScript.
 
 ## [Changelog](CHANGELOG.md)
 

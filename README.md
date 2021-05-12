@@ -41,6 +41,22 @@ npm i -D svelte-accessible-accordion
 
 ```
 
+### Slottable title
+
+Customize the accordion title by using the `"title"` slot.
+
+```svelte
+<Accordion>
+  <AccordionItem>
+    <strong slot="title" style="color: red">Title 1</strong>
+    Content 1
+  </AccordionItem>
+  <AccordionItem title="Title 2">Content 2</AccordionItem>
+  <AccordionItem title="Title 3">Content 2</AccordionItem>
+</Accordion>
+
+```
+
 ### Multiselect
 
 By default, only one accordion item can be expanded at one time. Set `multiselect` to allow multi-item expansion.

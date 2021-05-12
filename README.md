@@ -24,43 +24,6 @@ yarn add -D svelte-accessible-accordion
 npm i -D svelte-accessible-accordion
 ```
 
-## Styling
-
-Style the component by targeting the `[data-accordion]` and `[data-accordion-item]` attributes.
-
-```css
-[data-accordion] {
-  list-style: none;
-}
-
-[data-accordion-item] button {
-  border: 0;
-  border-radius: 0;
-  border-bottom: 1px solid #e0e0e0;
-  background: none;
-  font: inherit;
-  line-height: inherit;
-  color: inherit;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  text-align: left;
-}
-
-[data-accordion-item] [role="region"] {
-  padding: 1rem;
-}
-```
-
-The semantic element structure resembles the following:
-
-```yml
-- ul [data-accordion] # Accordion
-  - li [data-accordion-item] # AccordionItem
-    - button
-    - [role="region"]
-```
-
 ## Usage
 
 ### Basic
@@ -102,6 +65,43 @@ Use the `expanded` prop to expand an accordion item.
   <AccordionItem expanded title="Title 3">Content 2</AccordionItem>
 </Accordion>
 
+```
+
+## Styling
+
+Style the component by targeting the `[data-accordion]` and `[data-accordion-item]` attributes.
+
+```css
+[data-accordion] {
+  list-style: none;
+}
+
+[data-accordion-item] button {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #e0e0e0;
+  background: none;
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+[data-accordion-item] [role="region"] {
+  padding: 1rem;
+}
+```
+
+The semantic element structure resembles the following:
+
+```yml
+- ul [data-accordion] # Accordion
+  - li [data-accordion-item] # AccordionItem
+    - button
+    - [role="region"]
 ```
 
 ## API

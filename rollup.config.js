@@ -12,6 +12,10 @@ export default () => {
         .code-fence li+li {
           margin-top: 0;
         }
+
+        .code-fence button {
+          border-radius: 0;
+        }
         
         [data-accordion] {
           list-style: none;
@@ -19,7 +23,6 @@ export default () => {
         
         [data-accordion-item] button {
           border: 0;
-          border-radius: 0;
           border-bottom: 1px solid #e0e0e0;
           background: none;
           font: inherit;

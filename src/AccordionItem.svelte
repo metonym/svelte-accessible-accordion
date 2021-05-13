@@ -37,11 +37,11 @@
     on:click={() => {
       if (ctx) {
         ctx.toggle({ id, expanded: !expanded });
-        if (expanded && ref.getBoundingClientRect().top < 0)
+        if (expanded && ref && ref.getBoundingClientRect().top < 0) {
           ref.scrollIntoView();
+        }
       }
-    }}
-  >
+    }}>
     <slot name="title">{title}</slot>
   </button>
   <div role="region" {id} aria-labelledby={button_id} hidden={!expanded}>

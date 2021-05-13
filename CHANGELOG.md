@@ -10,6 +10,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Out-of-the box themes
 - Dispatch change event for `Accordion`
 
+## [1.0.1](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v1.0.1) - 2021-05-12
+
+**Fixes**
+
+- perform null check on element reference
+
+**Documentation**
+
+- add SvelteKit example located in the `example` folder
+
 ## [1.0.0](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v1.0.0) - 2020-12-30
 
 **Breaking Changes**

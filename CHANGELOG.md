@@ -10,6 +10,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Out-of-the box themes
 - Dispatch change event for `Accordion`
 
+## [1.0.2](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v1.0.2) - 2021-06-07
+
+**Fixes**
+
+- set `type="button"` on AccordionItem to prevent default button behavior when used in a form
+- replace `onDestroy` with `onMount` in AccordionItem
+
+**Documentation**
+
+- add `ref` to AccordionItem prop list
+- add example for disabling accordion items
+- add example for binding to `expanded`
+
 ## [1.0.1](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v1.0.1) - 2021-05-12
 
 **Fixes**

@@ -1,9 +1,16 @@
 <script lang="ts">
   import { Accordion, AccordionItem } from "../types";
+
+  let ref: HTMLButtonElement;
 </script>
 
 <Accordion multiselect>
-  <AccordionItem expanded title="Title 1">Content 1</AccordionItem>
-  <AccordionItem title="Title 2">Content 2</AccordionItem>
+  <AccordionItem bind:ref expanded disabled title="Title 1">
+    Content 1
+  </AccordionItem>
+  <AccordionItem>
+    <svelte:fragment slot="title">Title 2</svelte:fragment>
+    Content 2
+  </AccordionItem>
   <AccordionItem title="Title 3">Content 2</AccordionItem>
 </Accordion>

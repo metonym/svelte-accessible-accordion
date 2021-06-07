@@ -83,6 +83,34 @@ Use the `expanded` prop to expand an accordion item.
 
 ```
 
+Bind to the `expanded` prop on the accordion item.
+
+```svelte
+<script>
+  let expanded;
+</script>
+
+<Accordion>
+  <AccordionItem bind:expanded title="Title 1">Content 1</AccordionItem>
+</Accordion>
+
+<strong>Expanded? {expanded}</strong>
+
+```
+
+### Disabled items
+
+Set `disabled` to `true` to disable an accordion item
+
+```svelte
+<Accordion>
+  <AccordionItem disabled title="Title 1">Content 1</AccordionItem>
+  <AccordionItem disabled title="Title 2">Content 2</AccordionItem>
+  <AccordionItem title="Title 3">Content 2</AccordionItem>
+</Accordion>
+
+```
+
 ## Styling
 
 Style the component by targeting the `[data-accordion]` and `[data-accordion-item]` attributes.
@@ -104,6 +132,11 @@ Style the component by targeting the `[data-accordion]` and `[data-accordion-ite
   padding: 0.5rem 1rem;
   width: 100%;
   text-align: left;
+}
+
+[data-accordion-item] button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 [data-accordion-item] [role="region"] {
@@ -136,6 +169,7 @@ The semantic element structure resembles the following:
 | title     | `string` or `slot:title` (default: `"Title"`)              |
 | expanded  | `boolean` (default: `false`)                               |
 | disabled  | `boolean` (default: `false`)                               |
+| ref       | `HTMLButtonElement` (default: `null`)                      |
 
 #### Forwarded events
 

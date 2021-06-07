@@ -5,15 +5,17 @@
   export let disabled = false;
   export let ref = null;
 
-  import { getContext, onDestroy } from "svelte";
+  import { getContext, onMount } from "svelte";
 
   const ctx = getContext("Accordion");
 
   let unsubscribe = undefined;
 
-  onDestroy(() => {
-    if (ctx) ctx.remove({ id });
-    if (unsubscribe) unsubscribe();
+  onMount(() => {
+    return () => {
+      if (ctx) ctx.remove({ id });
+      if (unsubscribe) unsubscribe();
+    };
   });
 
   $: button_id = `button-${id}`;
@@ -28,6 +30,7 @@
 <li data-accordion-item {...$$restProps}>
   <button
     bind:this={ref}
+    type="button"
     aria-expanded={expanded}
     aria-controls={id}
     aria-disabled={disabled}

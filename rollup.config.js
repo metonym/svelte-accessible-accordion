@@ -33,6 +33,11 @@ export default () => {
           width: 100%;
           text-align: left;
         }
+
+        [data-accordion-item] button[disabled] {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
         
         [data-accordion-item] [role="region"] {
           padding: 1rem;

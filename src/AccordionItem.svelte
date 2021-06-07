@@ -30,6 +30,7 @@
 <li data-accordion-item {...$$restProps}>
   <button
     bind:this={ref}
+    type="button"
     aria-expanded={expanded}
     aria-controls={id}
     aria-disabled={disabled}

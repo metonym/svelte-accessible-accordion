@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Out-of-the box themes
 - Dispatch change event for `Accordion`
 
+## [1.0.3](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v1.0.3) - 2021-08-23
+
+**Documentation**
+
+- add "Default value" column to component prop tables to improve readability
+
 ## [1.0.2](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v1.0.2) - 2021-06-07
 
 **Fixes**

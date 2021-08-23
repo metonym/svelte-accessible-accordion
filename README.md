@@ -8,7 +8,7 @@
 
 This Svelte component implements [WAI-ARIA design guidelines for an Accordion](https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html).
 
-**Note**: This component is _unstyled_ by default.
+**Note**: This component is _unstyled_ by design. See the [Styling section](#styling).
 
 Try it in the [Svelte REPL](https://svelte.dev/repl/85be3a105c3f4fe0892150380914be96).
 
@@ -18,9 +18,15 @@ Try it in the [Svelte REPL](https://svelte.dev/repl/85be3a105c3f4fe0892150380914
 
 ## Installation
 
+**Yarn**
+
 ```bash
 yarn add -D svelte-accessible-accordion
-# OR
+```
+
+**NPM**
+
+```bash
 npm i -D svelte-accessible-accordion
 ```
 
@@ -157,19 +163,19 @@ The semantic element structure resembles the following:
 
 ### Accordion
 
-| Prop name   | Value                        |
-| :---------- | :--------------------------- |
-| multiselect | `boolean` (default: `false`) |
+| Prop name   | Type      | Default value |
+| :---------- | :-------- | :------------ |
+| multiselect | `boolean` | `false`       |
 
 ### AccordionItem
 
-| Prop name | Value                                                      |
-| :-------- | :--------------------------------------------------------- |
-| id        | `string` (default: `"item" + Math.random().toString(36)"`) |
-| title     | `string` or `slot:title` (default: `"Title"`)              |
-| expanded  | `boolean` (default: `false`)                               |
-| disabled  | `boolean` (default: `false`)                               |
-| ref       | `HTMLButtonElement` (default: `null`)                      |
+| Prop name | Value                    | Default value                          |
+| :-------- | :----------------------- | :------------------------------------- |
+| id        | `string`                 | `"item" + Math.random().toString(36)"` |
+| title     | `string` or `slot:title` | `"Title"`                              |
+| expanded  | `boolean`                | `false`                                |
+| disabled  | `boolean`                | `false`                                |
+| ref       | `HTMLButtonElement`      | `null`                                 |
 
 #### Forwarded events
 
@@ -178,6 +184,8 @@ The semantic element structure resembles the following:
 ## TypeScript
 
 Svelte version 3.31 or greater is required to use this component with TypeScript.
+
+TypeScript definitions are located in the [types folder](./types).
 
 ## [Changelog](CHANGELOG.md)
 

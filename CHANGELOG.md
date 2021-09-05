@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Out-of-the box themes
 - Dispatch change event for `Accordion`
 
+## [2.0.0](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v2.0.0) - 2021-09-05
+
+- use `.svelte.d.ts` extension for component TypeScript definitions
+
 ## [1.0.3](https://github.com/metonym/svelte-accessible-accordion/releases/tag/v1.0.3) - 2021-08-23
 
 **Documentation**

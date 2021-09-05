@@ -4,6 +4,7 @@
   let ref: HTMLButtonElement;
 </script>
 
+<!-- svelte-ignore missing-declaration -->
 <Accordion multiselect>
   <AccordionItem bind:ref expanded disabled title="Title 1">
     Content 1

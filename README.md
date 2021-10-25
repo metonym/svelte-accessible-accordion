@@ -44,7 +44,6 @@ npm i -D svelte-accessible-accordion
   <AccordionItem title="Title 2">Content 2</AccordionItem>
   <AccordionItem title="Title 3">Content 2</AccordionItem>
 </Accordion>
-
 ```
 
 ### Slottable title
@@ -60,7 +59,6 @@ Customize the accordion title by using the `"title"` slot.
   <AccordionItem title="Title 2">Content 2</AccordionItem>
   <AccordionItem title="Title 3">Content 2</AccordionItem>
 </Accordion>
-
 ```
 
 ### Multiselect
@@ -73,7 +71,6 @@ By default, only one accordion item can be expanded at one time. Set `multiselec
   <AccordionItem title="Title 2">Content 2</AccordionItem>
   <AccordionItem title="Title 3">Content 2</AccordionItem>
 </Accordion>
-
 ```
 
 ### Expanded items
@@ -86,22 +83,22 @@ Use the `expanded` prop to expand an accordion item.
   <AccordionItem expanded title="Title 2">Content 2</AccordionItem>
   <AccordionItem expanded title="Title 3">Content 2</AccordionItem>
 </Accordion>
-
 ```
 
 Bind to the `expanded` prop on the accordion item.
 
 ```svelte
 <script>
+  import { Accordion, AccordionItem } from "svelte-accessible-accordion";
+
   let expanded;
 </script>
 
 <Accordion>
-  <AccordionItem bind:expanded title="Title 1">Content 1</AccordionItem>
+  <AccordionItem bind:expanded title="Expanded? {expanded}">
+    Content
+  </AccordionItem>
 </Accordion>
-
-<strong>Expanded? {expanded}</strong>
-
 ```
 
 ### Disabled items
@@ -114,7 +111,6 @@ Set `disabled` to `true` to disable an accordion item
   <AccordionItem disabled title="Title 2">Content 2</AccordionItem>
   <AccordionItem title="Title 3">Content 2</AccordionItem>
 </Accordion>
-
 ```
 
 ## Styling

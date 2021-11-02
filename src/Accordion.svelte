@@ -1,4 +1,7 @@
 <script>
+  /**
+   * Set to `true` to for multiple accordion items to be expandable
+   */
   export let multiselect = false;
 
   import { setContext } from "svelte";

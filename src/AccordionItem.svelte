@@ -1,8 +1,28 @@
 <script>
-  export let id = "item" + Math.random().toString(36);
+  /**
+   * Specify the accordion item title text.
+   * Alternatively, use the "title" slot
+   */
   export let title = "Title";
+
+  /**
+   * Set to `true` to expand the accordion item
+   */
   export let expanded = false;
+
+  /**
+   * Set to `true` to disable the accordion item
+   */
   export let disabled = false;
+
+  /**
+   * Specify the id
+   */
+  export let id = "item" + Math.random().toString(36);
+
+  /**
+   * Obtain a reference to the `button` element
+   */
   export let ref = null;
 
   import { getContext, onMount } from "svelte";
@@ -44,7 +64,8 @@
           ref.scrollIntoView();
         }
       }
-    }}>
+    }}
+  >
     <slot name="title">{title}</slot>
   </button>
   <div role="region" {id} aria-labelledby={button_id} hidden={!expanded}>

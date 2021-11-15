@@ -30,6 +30,12 @@ yarn add -D svelte-accessible-accordion
 npm i -D svelte-accessible-accordion
 ```
 
+**pnpm**
+
+```bash
+pnpm i -D svelte-accessible-accordion
+```
+
 ## Usage
 
 ### Basic

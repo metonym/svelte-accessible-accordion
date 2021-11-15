@@ -2,11 +2,11 @@
 
 [![NPM][npm]][npm-url]
 
-> Accessible accordion component for Svelte.
+> Accessible accordion component for Svelte
 
 <!-- REPO_URL -->
 
-This Svelte component implements [WAI-ARIA design guidelines for an Accordion](https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html).
+`svelte-accessible-accordion` implements [WAI-ARIA design guidelines for an Accordion](https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html).
 
 **Note**: This component is _unstyled_ by design. See the [Styling section](#styling).
 
@@ -61,9 +61,11 @@ Customize the accordion title by using the `"title"` slot.
 </Accordion>
 ```
 
-### Multiselect
+### Multiselectable items
 
-By default, only one accordion item can be expanded at one time. Set `multiselect` to allow multi-item expansion.
+By default, only one accordion item can be expanded at one time.
+
+Set `multiselect` to allow multiple items to be expandable.
 
 ```svelte
 <Accordion multiselect>

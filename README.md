@@ -165,21 +165,21 @@ The semantic element structure resembles the following:
 
 ## API
 
-### Accordion
+### `Accordion` props
 
-| Prop name   | Type      | Default value |
+| Name        | Type      | Default value |
 | :---------- | :-------- | :------------ |
 | multiselect | `boolean` | `false`       |
 
-### AccordionItem
+### `AccordionItem` props
 
-| Prop name | Value                    | Default value                          |
-| :-------- | :----------------------- | :------------------------------------- |
-| id        | `string`                 | `"item" + Math.random().toString(36)"` |
-| title     | `string` or `slot:title` | `"Title"`                              |
-| expanded  | `boolean`                | `false`                                |
-| disabled  | `boolean`                | `false`                                |
-| ref       | `HTMLButtonElement`      | `null`                                 |
+| Name     | Value                    | Default value                          |
+| :------- | :----------------------- | :------------------------------------- |
+| id       | `string`                 | `"item" + Math.random().toString(36)"` |
+| title    | `string` or `slot:title` | `"Title"`                              |
+| expanded | `boolean`                | `false`                                |
+| disabled | `boolean`                | `false`                                |
+| ref      | `HTMLButtonElement`      | `null`                                 |
 
 #### Forwarded events
 

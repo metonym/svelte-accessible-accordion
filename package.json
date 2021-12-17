@@ -18,8 +18,8 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "svelte": "^3.44.1",
-    "svelte-check": "^2.2.9",
+    "svelte": "^3.44.3",
+    "svelte-check": "^2.2.11",
     "svelte-readme": "^3.6.1"
   },
   "repository": {

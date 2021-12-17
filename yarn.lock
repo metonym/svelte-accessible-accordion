@@ -952,10 +952,10 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-check@^2.2.9:
-  version "2.2.9"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-2.2.9.tgz#667134662f268bcbfe5e22bcb596fcd524d67ab0"
-  integrity sha512-au77iP0v2f8F0gWu5Nk3dPkASk4H6DyLQEDQrQR6a7BWJaTnGEZKFhe5EsD8f9tHLyA4awPBi+D56hVuRsbgNA==
+svelte-check@^2.2.11:
+  version "2.2.11"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-2.2.11.tgz#d436fd71dbc15876a1a5575a4924133620ac3f37"
+  integrity sha512-clotPGGZPj3LuS9qP1lk+Wwnsj+js42ehCPmHk+qtyaQh/dU95e0qkpPmtmOMYHN6My5Y75XqeN1QNLj5V5gwA==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
@@ -997,10 +997,10 @@ svelte-readme@^3.6.1:
     rollup-plugin-svelte "^7.0.0"
     rollup-plugin-terser "^7.0.2"
 
-svelte@^3.44.1:
-  version "3.44.1"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.44.1.tgz#5cc772a8340f4519a4ecd1ac1a842325466b1a63"
-  integrity sha512-4DrCEJoBvdR689efHNSxIQn2pnFwB7E7j2yLEJtHE/P8hxwZWIphCtJ8are7bjl/iVMlcEf5uh5pJ68IwR09vQ==
+svelte@^3.44.3:
+  version "3.44.3"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.44.3.tgz#795b1ced6ed3da44969099e5061b850c93c95e9a"
+  integrity sha512-aGgrNCip5PQFNfq9e9tmm7EYxWLVHoFsEsmKrtOeRD8dmoGDdyTQ+21xd7qgFd8MNdKGSYvg7F9dr+Tc0yDymg==
 
 terser@^5.0.0:
   version "5.7.1"

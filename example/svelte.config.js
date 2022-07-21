@@ -1,6 +1,10 @@
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  compilerOptions: { immutable: true },
+  kit: {
+    prerender: {
+      default: true
+    }
+  }
 };
 
 export default config;

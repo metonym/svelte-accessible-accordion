@@ -2,12 +2,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/kit": "1.0.0-next.324",
-    "svelte": "^3.48.0"
+    "@sveltejs/kit": "1.0.0-next.386",
+    "svelte": "^3.49.0",
+    "vite": "^3.0.2"
   }
 }
